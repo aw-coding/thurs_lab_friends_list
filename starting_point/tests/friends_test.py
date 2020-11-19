@@ -87,7 +87,6 @@ class TestFriends(unittest.TestCase):
   # 4. For a given person, add a new name to their list of friends
   # (e.g. the function add_friend(self.person2, "Scrappy-Doo") should add Scrappy-Doo to the friends.)
   # (hint: This function should not return anything. After the function call, check for the length of the friends array to test it!)
- 
   def test_add_friend(self):
     add_friend(self.person2, "Scrappy-Doo")
     self.assertEqual(2, len(self.person2["friends"]))
@@ -95,7 +94,6 @@ class TestFriends(unittest.TestCase):
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
-  @unittest.skip("delete this line to run the test")
   def test_remove_friend(self):
     add_friend(self.person2, "Scrappy-Doo")
     remove_friend(self.person2, "Fred")
@@ -104,7 +102,6 @@ class TestFriends(unittest.TestCase):
 
   # 6. Find the total of everyone's money
   # (hint: use the self.people array, remember how we checked the total number of eggs yesterday?)
-  @unittest.skip("delete this line to run the test")
   def test_total_money(self):
     self.assertEqual(143, total_money(self.people))
 

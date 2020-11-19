@@ -21,3 +21,19 @@ def likes_to_eat(person, food):
     return False     
  # 
 # print(likes_to_eat(person3, "spinach"))  
+
+def add_friend(person, friend):
+    person["friends"].append(friend)
+
+
+def remove_friend(person, friend):
+    person["friends"].remove(friend)
+
+
+def total_money(list):
+    total = 0
+    for person in list:
+       total = total + person["monies"]
+    return total
+    
+    # total = sum(list["monies"])
