@@ -8,6 +8,9 @@
 # "snacks": ["Scooby snacks"]
 # } 
 # }
+
+import pdb
+
 def get_name(person):
     return person["name"]
 
@@ -35,5 +38,29 @@ def total_money(list):
     for person in list:
        total = total + person["monies"]
     return total
-    
+
     # total = sum(list["monies"])
+
+def l_money(lender, lendee, amount):
+    lender["monies"] -= amount
+    lendee["monies"] += amount
+
+    # return lender["monies"], lendee["monies"]
+    # it seems the return statement is not necessary
+
+# l_money(person1, person2, 2)
+
+def all_favourite_foods(list):
+    list_of_favourite_foods = []
+    for person in list:
+        list_of_favourite_foods += person["favourites"] ["snacks"]
+    return list_of_favourite_foods
+
+# pdb.set_trace()
+def find_no_friendends(list):
+    losers = []
+    for person in list:
+        if person["friends"] == None:
+            losers.append(person)
+    return losers
+

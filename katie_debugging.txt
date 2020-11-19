@@ -76,3 +76,6 @@ arguments list for the current function
 
 you could keep the import pdb at the top
 but remove the set trace
+
+
+When testing a true/false, test for both of them
