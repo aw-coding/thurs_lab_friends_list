@@ -1,0 +1,78 @@
+step through line by line of code
+at what point does something go wrong?
+
+pdb = python debugger!
+
+it pauses our code at a certain point so we can see what's going on.
+put in break points -   pdb.set_trace()
+
+
+first import pdb library so we can use its features - import pdb
+at top of page
+
+-> ratings = []
+a line like the one above shows where the programme has paused - 
+this is the line that will be run next
+we can't run in the terminal stuff that are beyond this point
+
+ n + ENTER
+ moves the arrow on to the next line of code
+
+ l + ENTER
+ shows in terminal a few steps before and a few after
+ in the code
+ -> ratings_total = sum(ratings)
+ we would have expected it to loop over the cakes, but
+ it's just taken one cake 
+ the issue is the identation
+
+ def get_average_rating(cakes):
+    pdb.set_trace()
+    ratings = []
+
+    for cake in cakes:
+        ratings.append(cake["rating"])
+
+        ratings_total = sum(ratings)
+        number_of_cakes = len(cakes)
+        average = ratings_total / number_of_cakes
+
+        return average
+
+print(get_average_rating(cakes))
+
+each cake is getting the whole block of code, but
+all we want to do is to add it to our list
+
+c + ENTER
+does something... it stands for continue
+pdb pauses the programme
+the c command lets the rest of the programme run normally
+
+for big programmes, you might put multiple pdb.set_trace() in
+so if when you hit continue (c), and it hits 
+another pdb set trace, it'll stop
+if not, it'll run to the end of the programme
+kinda like a lifeline in knitting??
+
+
+pdb - you can see the status of all the variables
+while the programme is running
+
+h + ENTER
+is help
+will list commands you can use in pdb
+
+j + LINE NUMBER 
+will jump to that line
+you can't use it to go back in time
+you can go up in lines
+but the values will still be
+what they've been set to lower down
+
+
+a  + ENTER
+arguments list for the current function
+
+you could keep the import pdb at the top
+but remove the set trace
